@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Current TS File",
+          "type": "node",
+          "request": "launch",
+          "runtimeArgs": [
+              "-r",
+              "ts-node/register",
+              "-r",
+              "${workspaceRoot}/node_modules/tsconfig-paths/register",
+          ],
+          "args": [
+              "${workspaceRoot}/src/debug/dev.ts"
+          ],
+          "resolveSourceMapLocations": [
+              "${workspaceFolder}/**",
+              "!**/node_modules/**"
+          ],
+          "cwd": "${workspaceRoot}",
+          "protocol": "inspector",
+          "envFile": "${workspaceFolder}/.env",
+          "env": {
+              "TS_NODE_TRANSPILE_ONLY": "true"
+          }
+      }
+  ]
+}
