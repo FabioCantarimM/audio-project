@@ -1,0 +1,19 @@
+{
+    "watch": [
+      "src",
+      ".env"
+    ],
+    "ext": "ts",
+    "ignore": [
+      "node_modules/**",
+      "src/**/*.spec.ts",
+      "files/**/**",
+      ".git",
+      ".gitignore",
+      ".eslintrc.js",
+      ".eslintignore",
+      "dist"
+    ],
+    "exec": "node -r tsconfig-paths/register -r ts-node/register ./src/app.ts"
+  }
+  
